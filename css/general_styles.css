@@ -16,7 +16,7 @@ body {
 .container {
     width: 1200px;
     margin: 0 auto;
-
+    
     border: 1px solid #e4cdd2;
 }
 
@@ -25,18 +25,24 @@ main {
     justify-content: space-around;
     align-items: center;
     min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    background: linear-gradient(80deg, #ab741f 35%, #171717 51.05%);
+    border: 1px solid #e4cdd2;
 }
 
-main::before {
+/* main .bg {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 35%;
-    height: 100%;
+    width: 600px;
+    height: 1200px;
     background: #ab741f;
     z-index: -100;
-}
+    transform: rotate(-30deg);
+} */
 
 main .avatar {
     border: 3px solid #092667;
