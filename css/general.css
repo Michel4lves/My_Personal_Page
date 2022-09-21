@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'B612 Mono', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+
+    border: 1px solid #e4cdd2;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    background: #ab741f;
+    z-index: -100;
+}
+
+main .avatar {
+    border: 3px solid #092667;
+    border-radius: 50%;
+    overflow: hidden;
+}

@@ -1,0 +1,61 @@
+main .presentation {
+    width: 600px;
+    height: 400px;
+    color: #e4cdd2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .presentation .hello {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+main .presentation .hello h2 {
+    color: #ab741f;
+    font-size: 28px;
+}
+
+main .presentation .hello span {
+    font-size: 28px;
+}
+
+main .presentation h1 {
+    font-family: 'B612 Mono', monospace;
+    font-size: 36px;
+    position: relative;
+    max-height: 40px;
+    color: #e4cdd2;
+    font-weight: normal;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: textTyping 10s steps(12) infinite, flashes .7s infinite;
+}
+
+@keyframes textTyping {
+    0%, 90%, 100% {
+        width: 1px;
+    }
+    30%, 60% {
+        width: 280.8px;
+    }
+}
+
+@keyframes flashes {
+    0%, 100% {
+        box-shadow: 2px 0 0 #e4cdd2;
+    }
+    50% {
+        box-shadow: 2px 0 0 #171717;
+    }
+}
+
+main .presentation h3 {
+    font-size: 28px;
+    color: #ab741f;
+}
