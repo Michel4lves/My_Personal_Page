@@ -30,7 +30,7 @@
     padding: 10px 100px;
     background: transparent;
     overflow: hidden;
-    z-index: 3;
+    z-index: 100;
 }
 
 .navigation-bar img {
@@ -89,13 +89,17 @@
     width: 100%;
 }
 
-
-
-
-
-
-
-
+.menu {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 200;
+    background: #020202;
+}
 
 
 
