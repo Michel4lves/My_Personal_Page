@@ -1,4 +1,30 @@
-main .presentation {
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    animation: scale 2s ease;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.header-container .avatar {
+    border: 3px solid #092667;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header-container .presentation {
     width: 600px;
     height: 400px;
     color: #e4cdd2;
@@ -9,22 +35,22 @@ main .presentation {
     gap: 10px;
 }
 
-main .presentation .hello {
+.header-container .presentation .hello {
     display: flex;
     align-items: baseline;
     gap: 10px;
 }
 
-main .presentation .hello h2 {
+.header-container .presentation .hello h2 {
     color: #ab741f;
     font-size: 28px;
 }
 
-main .presentation .hello span {
+.header-container .presentation .hello span {
     font-size: 28px;
 }
 
-main .presentation h1 {
+.header-container .presentation h1 {
     font-family: 'B612 Mono', monospace;
     font-size: 36px;
     position: relative;
@@ -55,7 +81,7 @@ main .presentation h1 {
     }
 }
 
-main .presentation h3 {
+.header-container .presentation h3 {
     font-size: 28px;
     color: #ab741f;
 }
