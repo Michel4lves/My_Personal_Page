@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
@@ -18,8 +18,105 @@
     }
 }
 
+
+.navigation-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background: transparent;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.navigation-bar img {
+    width: 50px;
+    transition: 0.5s;
+}
+
+.navigation-bar img:hover {
+    transform: rotateZ(-30deg);
+}
+
+.navigation-bar .menu-btn {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation-bar .menu-btn .first-bar,
+.navigation-bar .menu-btn .second-bar,
+.navigation-bar .menu-btn .third-bar {
+    position: relative;
+    width: 60px;
+    height: 3px;
+    background: transparent;
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+.navigation-bar .menu-btn .first-bar::before,
+.navigation-bar .menu-btn .second-bar::before,
+.navigation-bar .menu-btn .third-bar::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background: #ab741f;
+    transition: 0.5s;
+}
+
+.navigation-bar .menu-btn .second-bar::before {
+    width: 60%;
+}
+
+.navigation-bar .menu-btn .third-bar::before {
+    width: 100%;
+}
+
+.navigation-bar .menu-btn:hover .first-bar::before,
+.navigation-bar .menu-btn:hover .second-bar::before,
+.navigation-bar .menu-btn:hover .third-bar::before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header-container .avatar {
-    border: 3px solid #092667;
+    border: 3px solid #ab741f;
     border-radius: 50%;
     overflow: hidden;
 }
