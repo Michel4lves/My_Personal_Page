@@ -1,0 +1,111 @@
+main {
+    position: absolute;
+    /* bottom: 100%; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121212;
+    z-index: 100;
+}
+
+.about-container {
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* animation: scale 3s ease; */
+    background-color: rgb(27, 24, 24);
+}
+
+/* @keyframes scale{
+    0%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+} */
+
+.about-container h1 {
+    font-size: 2.5em;
+    font-weight: bolt;
+    color: #e4cdd2;
+}
+
+.about-container h1 span {
+    color: #ab741f;
+    margin-left: 20px;
+}
+
+.about-container .about-me-box {
+    border: 1px solid red;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.about-container .about-me-box .description {
+    border: 1px solid red;
+
+    position: relative;
+    color: #e4cdd2;
+    font-size: 24px;
+    text-indent: 50px;
+    width: 60%;
+    gap: 20px;
+}
+
+.about-container .about-me-box img {
+    border: 1px solid red;
+
+    position: relative;
+    width: 450px;
+}
+
+.about-container .about-me-box .cvbtn {
+    position: relative;
+    padding: 10px 50px 10px 0px;
+    border: 1px solid #ab741f;
+    margin: 30px;
+    margin-left: 170px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ab741f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 102;
+}
+
+.about-container .about-me-box .cvbtn:hover {
+    color: #fff;
+}
+
+.about-container .about-me-box .cvbtn span {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #ab741f;
+    transition: width 0.5s, height 0.5s;
+    z-index: -1;
+}
+
+.about-container .about-me-box .cvbtn:hover span {
+    width: 750px;
+    height: 300px;
+}

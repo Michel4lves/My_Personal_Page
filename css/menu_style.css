@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.menu {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 900;
+    background: #020202;
+    transition: 0.5s;
+}
+
+.menu.active {
+    top: 0;
+}
+
+.menu img {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 50px;
+    transition: 0.5s;
+}
+
+.menu img:hover {
+    transform: rotateZ(-30deg);
+}
+
+.menu .btn-exit-menu {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    /* border: 1px solid #fff; */
+}
+
+.menu .btn-exit-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    background: #ab741f;
+    width: 3px;
+    height: 55px;
+}
+
+.menu .btn-exit-menu::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    background: #ab741f;
+    width: 3px;
+    height: 55px;
+    transform: rotate(90deg);
+}
+
+.menu .btn-exit-menu:hover {
+    transform: rotate(45deg);
+}
+
+ul {
+    position: relative;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+ul li::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ab741f;
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 700;
+    pointer-events: none;
+    letter-spacing: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    white-space: nowrap;
+    font-family: 'Monoton', cursive;
+}
+
+ul li:hover::before {
+    opacity: 0.2;
+    letter-spacing: 0px;
+}
+
+ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px;
+    text-decoration: none;
+    color: #ab741f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    z-index: 5;
+}
+
+ul:hover li a {
+    opacity: 0.05;
+}
+
+ul li a:hover {
+    transform: scale(1.4);
+    z-index: 1000;
+    opacity: 1;
+    color: #fff;
+}

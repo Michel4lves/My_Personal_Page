@@ -9,37 +9,24 @@
     <link rel="stylesheet" href="css/general_styles.css">
     <link rel="stylesheet" href="css/header_style.css">
     <link rel="stylesheet" href="css/avatar_style.css">
+    <link rel="stylesheet" href="css/menu_style.css">
+    <link rel="stylesheet" href="css/section_about_style.css">
+    <!-- <link rel="stylesheet" href="css/transition.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="color-set">
+    <header class="color-set" id="header">
         <div class="navigation-bar">
             <img src="imgs/logos/logo-la.png" alt="logo">
-            <div class="menu-btn">
+            <div class="menu-btn" onclick="menu()">
                 <span class="first-bar"></span>
                 <span class="second-bar"></span>
                 <span class="third-bar"></span>
             </div>
         </div>
-        <div class="menu">
-            <a href="#">Início</a>
-            <a href="#">Sobre mim</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contato</a>
-        </div>
-
-
-
-
-
-
-
-
-
-
         <div class="header-container">
             <div class="avatar color-set">
                 <div class="picture">
@@ -60,7 +47,38 @@
             </div>
         </div>
     </header>
+    <section>
+        <div class="menu">
+            <img src="imgs/logos/logo-la.png" alt="logo">
+            <div class="btn-exit-menu  color-set" onclick="exitMenu()"></div>
+            <ul>
+                <li data-text="Início" onclick="link()"><a href="#header" class="color-set">Início</a></li>
+                <li data-text="Sobre mim"><a href="#" class="color-set">Sobre mim</a></li>
+                <li data-text="Portfolio"><a href="#" class="color-set">Portfolio</a></li>
+                <li data-text="Contato"><a href="#" class="color-set">Contato</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <main id="about">
+        <div class="about-container">
+            <h1>Sobre<span class="color-set">Mim</span></h1>
+            <div class="about-me-box">
+                <div class="description">
+                    <p>Sou um profissional apaixonado por tecnologia que, buscando transição de carreira, decidi trilhar o caminho da programação.</p>
+                    <p>Possuo conhecimento em <span class="color-set">desenvolvimento</span> de <span class="color-set">softwares</span> em geral e <span class="color-set">aplicações Web</span>.</p>
+                    <p>Atualmente estou focando nas tecnologias voltadas ao <span class="color-set">FrontEnd</span>.</p>
+                    <a href="#" class="cvbtn color-set"><span class="anmt"></span>Baixar CV</a>
+                </div>
+                <img src="imgs/perfil/perfil.png" alt="">
+            </div>
+        </div>
+    </main>
+    
+    <!-- <div class="transition color-set" id="transition"></div> -->
 
     <script src="js/avatar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="js/button_jq.js"></script>
 </body>
 </html>

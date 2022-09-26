@@ -6,7 +6,7 @@
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    animation: scale 2s ease;
+    animation: scale 3s ease;
 }
 
 @keyframes scale{
@@ -17,7 +17,6 @@
         transform: scale(1);
     }
 }
-
 
 .navigation-bar {
     position: fixed;
@@ -30,7 +29,7 @@
     padding: 10px 100px;
     background: transparent;
     overflow: hidden;
-    z-index: 100;
+    z-index: 800;
 }
 
 .navigation-bar img {
@@ -88,36 +87,6 @@
 .navigation-bar .menu-btn:hover .third-bar::before {
     width: 100%;
 }
-
-.menu {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 200;
-    background: #020202;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .header-container .avatar {
     border: 3px solid #ab741f;
