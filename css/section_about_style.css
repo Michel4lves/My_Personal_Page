@@ -37,14 +37,12 @@ main {
     color: #e4cdd2;
 }
 
-.about-container h1 span {
+.about-container h1 .me {
     color: #ab741f;
     margin-left: 20px;
 }
 
 .about-container .about-me-box {
-    border: 1px solid red;
-    
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -53,8 +51,6 @@ main {
 }
 
 .about-container .about-me-box .description {
-    border: 1px solid red;
-
     position: relative;
     color: #e4cdd2;
     font-size: 24px;
@@ -63,9 +59,12 @@ main {
     gap: 20px;
 }
 
-.about-container .about-me-box img {
-    border: 1px solid red;
+.about-container .about-me-box .description p span {
+    color: #ab741f;
+}
 
+
+.about-container .about-me-box img {
     position: relative;
     width: 450px;
 }
@@ -108,4 +107,9 @@ main {
 .about-container .about-me-box .cvbtn:hover span {
     width: 750px;
     height: 300px;
+}
+
+.about-container h1 .my {
+    color: #ab741f;
+    margin-right: 20px;
 }
