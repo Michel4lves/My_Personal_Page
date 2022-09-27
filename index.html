@@ -17,7 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onscroll="menuPosition()">
+<!-- Header section -->
     <header class="color-set" id="header">
         <div class="navigation-bar">
             <img src="imgs/logos/logo-la.png" alt="logo">
@@ -47,19 +48,24 @@
             </div>
         </div>
     </header>
+<!-- End of header section -->
+
+<!-- Menu section -->
     <section>
         <div class="menu">
             <img src="imgs/logos/logo-la.png" alt="logo">
             <div class="btn-exit-menu  color-set" onclick="exitMenu()"></div>
             <ul>
-                <li data-text="Início" onclick="link()"><a href="#header" class="color-set">Início</a></li>
-                <li data-text="Sobre mim"><a href="#" class="color-set">Sobre mim</a></li>
+                <li data-text="Início" onclick="linkHome()"><a href="#header" class="color-set">Início</a></li>
+                <li data-text="Sobre mim"onclick="linkAbout()"><a href="#about" class="color-set">Sobre mim</a></li>
                 <li data-text="Portfolio"><a href="#" class="color-set">Portfolio</a></li>
                 <li data-text="Contato"><a href="#" class="color-set">Contato</a></li>
             </ul>
         </div>
     </section>
+<!-- End of menu section -->
 
+<!-- About main section -->
     <main id="about">
         <div class="about-container">
             <h1>Sobre<span class="color-set me">Mim</span></h1>
@@ -75,11 +81,11 @@
             <div class="skills">
                 <div class="card">
                     <div class="imgBx" data-text="Html">
-                        <div class="percent" style="--clr:#04fc43;--num:85">
-                            <div class="dot"></div>
+                        <div class="percent" style="--num:85">
+                            <div class="dot color-set"></div>
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
                             </svg>
                             <div class="number">
                                 <h2>85<span>%</span></h2>
@@ -97,11 +103,11 @@
                 </div>
                 <div class="card">
                     <div class="imgBx" data-text="Css">
-                        <div class="percent" style="--clr:#fee800;--num:72">
-                            <div class="dot"></div>
+                        <div class="percent" style="--num:72">
+                            <div class="dot color-set"></div>
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
                             </svg>
                             <div class="number">
                                 <h2>72<span>%</span></h2>
@@ -119,11 +125,11 @@
                 </div>
                 <div class="card">
                     <div class="imgBx" data-text="Js">
-                        <div class="percent" style="--clr:#ff00be;--num:60">
-                            <div class="dot"></div>
+                        <div class="percent" style="--num:60">
+                            <div class="dot color-set"></div>
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
                             </svg>
                             <div class="number">
                                 <h2>60<span>%</span></h2>
@@ -141,11 +147,11 @@
                 </div>
                 <div class="card">
                     <div class="imgBx" data-text="Python">
-                        <div class="percent" style="--clr:#06ccff;--num:95">
-                            <div class="dot"></div>
+                        <div class="percent" style="--num:95">
+                            <div class="dot color-set"></div>
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
                             </svg>
                             <div class="number">
                                 <h2>95<span>%</span></h2>
@@ -164,7 +170,9 @@
             </div>
         </div>
     </main>
-    
+<!-- End of about main section -->
+
+
     <!-- <div class="transition color-set" id="transition"></div> -->
 
     <script src="js/avatar.js"></script>

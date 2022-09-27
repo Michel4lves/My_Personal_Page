@@ -12,6 +12,7 @@ body {
     background: #171717;
     user-select: none;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 header {
