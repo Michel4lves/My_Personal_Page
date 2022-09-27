@@ -1,5 +1,6 @@
 main {
     position: absolute;
+    top: 0;
     /* bottom: 100%; */
     width: 100%;
     display: flex;
@@ -11,30 +12,20 @@ main {
 
 .about-container {
     width: 1200px;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
+    padding-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    /* animation: scale 3s ease; */
-    background-color: rgb(27, 24, 24);
 }
-
-/* @keyframes scale{
-    0%{
-        transform: scale(0.7);
-    }
-    100%{
-        transform: scale(1);
-    }
-} */
 
 .about-container h1 {
     font-size: 2.5em;
     font-weight: bolt;
-    color: #e4cdd2;
+    color: #f5f5f5;
 }
 
 .about-container h1 .me {
@@ -48,11 +39,12 @@ main {
     align-items: center;
     width: 100%;
     padding: 50px;
+    margin-bottom: 50px;
 }
 
 .about-container .about-me-box .description {
     position: relative;
-    color: #e4cdd2;
+    color: #f5f5f5;
     font-size: 24px;
     text-indent: 50px;
     width: 60%;
@@ -89,7 +81,7 @@ main {
 }
 
 .about-container .about-me-box .cvbtn:hover {
-    color: #fff;
+    color: #f5f5f5;
 }
 
 .about-container .about-me-box .cvbtn span {
@@ -113,3 +105,244 @@ main {
     color: #ab741f;
     margin-right: 20px;
 }
+
+
+.about-container .skills {
+    position: relative;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.about-container .skills .card {
+    position: relative;
+    height: 250px;
+    background: #f5f5f5;
+    display: flex;
+    width: 45%;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+.about-container .skills .card .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.about-container .skills .card:hover .imgBx {
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #121212;
+    align-items: center;
+    padding-top: 0;
+    border-radius: 50%;
+}
+
+.about-container .skills .card .imgBx::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+}
+
+.about-container .skills .card:hover .imgBx::before  {
+    color: transparent;
+}
+
+.about-container .skills .card:nth-child(1) .imgBx::after {
+    content: url(../imgs/skills/html-5.png);
+    position: absolute;
+    visibility: hidden;
+}
+
+.about-container .skills .card:nth-child(2) .imgBx::after {
+    content: url(../imgs/skills/css-3.png);
+    position: absolute;
+    visibility: hidden;
+}
+
+.about-container .skills .card:nth-child(3) .imgBx::after {
+    content: url(../imgs/skills/js.png);
+    position: absolute;
+    visibility: hidden;
+}
+
+.about-container .skills .card:nth-child(4) .imgBx::after {
+    content: url(../imgs/skills/python.png);
+    position: absolute;
+    visibility: hidden;
+}
+
+.about-container .skills .card:hover .imgBx::after {
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+
+.about-container .skills .card .imgBx .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.about-container .skills .card .imgBx .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.about-container .skills .card .imgBx .percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px,5px);
+}
+
+.about-container .skills .card .imgBx .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    /* 360deg / 100 = 3.6 */
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.about-container .skills .card:nth-child(1):hover .number,
+.about-container .skills .card:nth-child(2):hover .number,
+.about-container .skills .card:nth-child(3):hover .number,
+.about-container .skills .card:nth-child(4):hover .number {
+    visibility: hidden;
+    transition-delay: 0.5s;
+}
+
+.number h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.number h2 span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.5em;
+}
+
+.number p {
+    font-weight: 300;
+    font-size: 0.75em;
+    line-height: 2px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.about-container .skills .card .content {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container .skills .card .content h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.about-container .skills .card .content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}
+
