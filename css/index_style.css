@@ -1,0 +1,84 @@
+@import url(general_styles.css);
+
+header {
+    width: 100%;
+    background: #121212;
+}
+
+.navigation-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background: transparent;
+    overflow: hidden;
+    z-index: 800;
+}
+
+.navigation-bar img {
+    width: 50px;
+    transition: 0.5s;
+}
+
+.navigation-bar img:hover {
+    transform: rotateZ(-30deg);
+}
+
+.navigation-bar .menu-btn {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation-bar .menu-btn .first-bar,
+.navigation-bar .menu-btn .second-bar,
+.navigation-bar .menu-btn .third-bar {
+    position: relative;
+    width: 60px;
+    height: 3px;
+    background: transparent;
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+.navigation-bar .menu-btn .first-bar::before,
+.navigation-bar .menu-btn .second-bar::before,
+.navigation-bar .menu-btn .third-bar::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background: #ab741f;
+    transition: 0.5s;
+}
+
+.navigation-bar .menu-btn .second-bar::before {
+    width: 60%;
+}
+
+.navigation-bar .menu-btn .third-bar::before {
+    width: 100%;
+}
+
+.navigation-bar .menu-btn:hover .first-bar::before,
+.navigation-bar .menu-btn:hover .second-bar::before,
+.navigation-bar .menu-btn:hover .third-bar::before {
+    width: 100%;
+}
+
+.page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}

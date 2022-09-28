@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +14,4 @@ body {
     background: #171717;
     user-select: none;
     scroll-behavior: smooth;
-    overflow: hidden;
-}
-
-header {
-    width: 100%;
-    background: linear-gradient(80deg, #ab741f 30%, #171717 45%);
 }

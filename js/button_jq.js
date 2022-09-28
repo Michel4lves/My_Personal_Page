@@ -12,4 +12,3 @@ $(document).ready(function(e) {
         $(this).find('span').css({top:y, left:x})
     })
 })
-

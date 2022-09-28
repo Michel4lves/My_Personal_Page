@@ -16,25 +16,23 @@ function menuPosition() {
 function exitMenu() {
     let menu = document.querySelector('.menu')
     menu.classList.remove('active')
-    menu.style.top = '-100%'
+    menu.style.top = '-110%'
 }
 
-function linkHome() {
-    let body = document.querySelector('body')
+function openPage(page, local) {
+    var index = page
+    var target = local
+    var url = '../content/' + index + '.html'
+    var xml = new XMLHttpRequest()
+    xml.onreadystatechange = function() {
+        if (xml.readyState == 4 && xml.status == 200) {
+            document.getElementById(target).innerHTML = xml.responseText
+        }
+    }
+    xml.open('GET', url, true)
+    xml.send()
+    
     let menu = document.querySelector('.menu')
-    let about = document.querySelector('#about')
     menu.classList.remove('active')
-    body.style.overflow = 'hidden'
-    about.style.left = '100%'
-    menu.style.top = '-100%'
-}
-
-function linkAbout() {
-    let body = document.querySelector('body')
-    let menu = document.querySelector('.menu')
-    let about = document.querySelector('#about')
-    menu.classList.remove('active')
-    body.style.overflow = 'visible'
-    about.style.left = '0'
-    menu.style.top = '-100%'
+    menu.style.top = '-110%'
 }

@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michel Alves Personal Page</title>
     
-    <link rel="stylesheet" href="css/general_styles.css">
-    <link rel="stylesheet" href="css/header_style.css">
-    <link rel="stylesheet" href="css/avatar_style.css">
+    <link rel="stylesheet" href="css/index_style.css">
     <link rel="stylesheet" href="css/menu_style.css">
-    <link rel="stylesheet" href="css/section_about_style.css">
     <!-- <link rel="stylesheet" href="css/transition.css"> -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body onscroll="menuPosition()">
+
+
 <!-- Header section -->
     <header class="color-set" id="header">
         <div class="navigation-bar">
@@ -28,156 +25,29 @@
                 <span class="third-bar"></span>
             </div>
         </div>
-        <div class="header-container">
-            <div class="avatar color-set">
-                <div class="picture">
-                    <img src="imgs/avatar/eu-la.png" alt="me.png" class="me color-set">
-                    <div class="eyes">
-                        <div class="eye"></div>
-                        <div class="eye"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="presentation">
-                <div class="hello">
-                    <h2 class="color-set">Olá,</h2>
-                    <span>eu sou</span>
-                </div>
-                <h1>Michel Alves</h1>
-                <h3 class="color-set">Desenvolvedor Web Front End</h3>
-            </div>
-        </div>
     </header>
 <!-- End of header section -->
-
 <!-- Menu section -->
     <section>
         <div class="menu">
             <img src="imgs/logos/logo-la.png" alt="logo">
             <div class="btn-exit-menu  color-set" onclick="exitMenu()"></div>
             <ul>
-                <li data-text="Início" onclick="linkHome()"><a href="#header" class="color-set">Início</a></li>
-                <li data-text="Sobre mim"onclick="linkAbout()"><a href="#about" class="color-set">Sobre mim</a></li>
-                <li data-text="Portfolio"><a href="#" class="color-set">Portfolio</a></li>
-                <li data-text="Contato"><a href="#" class="color-set">Contato</a></li>
+                <li data-text="Início" onclick="openPage('intro','content')"><a class="color-set">Início</a></li>
+                <li data-text="Sobre mim" onclick="openPage('about','content')"><a class="color-set">Sobre mim</a></li>
+                <li data-text="Portfolio" onclick="openPage('portfolio','content')"><a class="color-set">Portfolio</a></li>
+                <li data-text="Contato" onclick="openPage('contact','content')"><a class="color-set">Contato</a></li>
             </ul>
         </div>
     </section>
 <!-- End of menu section -->
-
-<!-- About main section -->
-    <main id="about">
-        <div class="about-container">
-            <h1>Sobre<span class="color-set me">Mim</span></h1>
-            <div class="about-me-box">
-                <div class="description">
-                    <p>Atualmente focando nas tecnologias voltadas ao <span class="color-set">FrontEnd</span>, sou um profissional apaixonado por tecnologia que, buscando transição de carreira, decidi trilhar o caminho da programação.</p>
-                    <p>Possuo conhecimento em <span class="color-set">desenvolvimento</span> de <span class="color-set">softwares</span> em geral e <span class="color-set">aplicações Web</span>.</p>
-                    <a href="#" class="cvbtn color-set"><span class="anmt"></span>Baixar CV</a>
-                </div>
-                <img src="imgs/perfil/perfil.png" alt="">
-            </div>
-            <h1><span class="color-set my">Minhas</span>Habilidades</h1>
-            <div class="skills">
-                <div class="card">
-                    <div class="imgBx" data-text="Html">
-                        <div class="percent" style="--num:85">
-                            <div class="dot color-set"></div>
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>85<span>%</span></h2>
-                                <p>Html</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div>
-                            <h3>Html</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque commodi tenetur modi.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx" data-text="Css">
-                        <div class="percent" style="--num:72">
-                            <div class="dot color-set"></div>
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>72<span>%</span></h2>
-                                <p>Css</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div>
-                            <h3>Css</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque commodi tenetur modi.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx" data-text="Js">
-                        <div class="percent" style="--num:60">
-                            <div class="dot color-set"></div>
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>60<span>%</span></h2>
-                                <p>Js</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div>
-                            <h3>Js</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque commodi tenetur modi.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx" data-text="Python">
-                        <div class="percent" style="--num:95">
-                            <div class="dot color-set"></div>
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>95<span>%</span></h2>
-                                <p>Python</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div>
-                            <h3>Python</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque commodi tenetur modi.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main>
+        <div class="page-container" id="content"></div>
     </main>
-<!-- End of about main section -->
 
-
-    <!-- <div class="transition color-set" id="transition"></div> -->
-
-    <script src="js/avatar.js"></script>
     <script src="js/menu.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="js/button_jq.js"></script>
+    <script src="js/intro.js"></script>
 </body>
 </html>
