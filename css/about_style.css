@@ -76,28 +76,27 @@
     text-transform: uppercase;
     transition: 0.5s;
     overflow: hidden;
-    z-index: 102;
+    z-index: 1;
 }
 
 .about-container .about-me-box .cvbtn:hover {
     color: #f5f5f5;
 }
 
-.about-container .about-me-box .cvbtn span {
+.about-container .about-me-box .cvbtn .btn {
     position: absolute;
+    top: -1px;
+    left: -20px;
     display: block;
-    width: 0px;
-    height: 0px;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: #ab741f;
+    width: 10px;
+    height: 55px;
+    background-color: #ab741f;
     transition: width 0.5s, height 0.5s;
     z-index: -1;
 }
 
-.about-container .about-me-box .cvbtn:hover span {
-    width: 750px;
-    height: 300px;
+.about-container .about-me-box .cvbtn:hover .btn {
+    width: 450px;
 }
 
 .about-container h1 .my {
