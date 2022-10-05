@@ -139,3 +139,79 @@
     font-size: 28px;
     color: #ab741f;
 }
+
+@media (max-width: 1200px) {
+    .header-container {
+        width: 100%;
+    }
+
+    .header-container .presentation .hello h2 {
+        font-size: 24px;
+    }
+    
+    .header-container .presentation .hello span {
+        font-size: 24px;
+    }
+
+    .header-container .presentation h1 {
+        font-size: 30px;
+    }
+
+    @keyframes textTyping {
+        0%, 90%, 100% {
+            width: 1px;
+        }
+        30%, 60% {
+            width: 234px;
+        }
+    }
+
+    .header-container .presentation h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 960px)  {
+    .bg {
+        background: #171717;
+    }
+
+    .header-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        min-height: 99.7vh;
+    }
+
+    .header-container .presentation .hello h2 {
+        font-size: 28px;
+    }
+    
+    .header-container .presentation .hello span {
+        font-size: 28px;
+    }
+
+    .header-container .presentation h1 {
+        font-size: 36px;
+    }
+
+    @keyframes textTyping {
+        0%, 90%, 100% {
+            width: 1px;
+        }
+        30%, 60% {
+            width: 280.8px;
+        }
+    }
+
+    .header-container .presentation h3 {
+        font-size: 28px;
+    }
+
+    .header-container .avatar {
+        transform: translateY(-100px);
+    }
+
+    .header-container .presentation {
+        margin-left: 100px;
+    }
+}
