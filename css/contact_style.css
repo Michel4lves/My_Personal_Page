@@ -20,6 +20,16 @@ section {
     min-height: 550px;
     display: flex;
     z-index: 700;
+    animation: scale 3s ease;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .container .contactInfo {
@@ -53,9 +63,12 @@ section {
     display: flex;
     margin: 20px 0;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container .contactInfo .info li span {
+    border: 1px solid red;
     font-size: 18px;
     color: #121212;
     margin-left: 10px;
