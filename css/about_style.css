@@ -343,3 +343,108 @@
     text-decoration: none;
     color: #fff;
 }
+
+
+@media (max-width: 1200px) {
+    .about-container {
+        width: 100%;
+    }
+
+    .about-container h1 {
+        font-size: 2em;
+    }
+
+    .about-container .about-me-box {
+        justify-content: center;
+    }
+    
+    .about-container .about-me-box .description {
+        font-size: 20px;
+        text-indent: 35px;
+        width: 60%;
+    }
+
+    .about-container .about-me-box img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 960px) {
+    .about-container .about-me-box {
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+    }
+
+    .about-container .about-me-box .description {
+        font-size: 24px;
+        text-indent: 50px;
+        width: 100%;
+        gap: 30px;
+        margin-top: 20px;
+        padding: 0 30px;
+    }
+
+    .about-container .about-me-box .cvbtn {
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container .skills {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .about-container .skills .card {
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+        width: 300px;
+    }
+
+    .about-container .skills .card .imgBx {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        padding-top: 0;
+    }
+    
+    .about-container .skills .card:hover .imgBx {
+        left: calc(50% - 75px);
+    }
+
+    .about-container .skills .card .imgBx::before {
+        visibility: hidden;
+    }
+
+    .about-container .skills .card .content {
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px)  {
+    .about-container .about-me-box .description {
+        font-size: 18px;
+        text-indent: 20px;
+        width: 280px;
+        padding: 0px;
+    }
+
+    .about-container .about-me-box .cvbtn {
+        width: 100%;
+        padding: 10px 25px 10px 0px;
+    }
+    
+    .about-container .about-me-box img {
+        width: 250px;
+    }
+
+    .about-container h1 {
+        font-size: 22px;
+    }
+
+    .about-container .skills .card {
+        width: 250px;
+    }
+}

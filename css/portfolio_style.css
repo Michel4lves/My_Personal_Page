@@ -32,7 +32,6 @@
 
 .portfolio-container h1 .me {
     color: #ab741f;
-    margin-left: 20px;
 }
 
 .portfolio-container .cardBx {
@@ -41,7 +40,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 100px 0;
+    margin: 50px 0;
 }
 
 
@@ -203,5 +202,37 @@
 
     .portfolio-container .cardBx .card .contentBx .content p {
         margin-top: 30px;
+    }
+}
+
+@media (max-width: 680px) {
+    .portfolio-container h1 {
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 390px) {
+    .portfolio-container h1 {
+        font-size: 1.8em;
+    }
+
+    .portfolio-container .cardBx {
+        margin: 10px 0;
+    }
+    
+    .portfolio-container .cardBx .card {
+        max-width: 270px;
+    }
+
+    .portfolio-container .cardBx .card .imgBx {
+        height: 200px;
+    }
+
+    .portfolio-container .cardBx .card .contentBx .content h2 {
+        font-size: 2em;
+    }
+
+    .portfolio-container .cardBx .card .contentBx .content p {
+        font-size: 1.5em;
     }
 }

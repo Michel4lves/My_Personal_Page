@@ -179,7 +179,7 @@
     .header-container {
         flex-direction: column-reverse;
         align-items: center;
-        min-height: 99.7vh;
+        min-height: 650px;
     }
 
     .header-container .presentation .hello h2 {
@@ -213,5 +213,34 @@
 
     .header-container .presentation {
         margin-left: 100px;
+    }
+}
+
+@media (max-width: 540px)  {
+    .header-container .presentation {
+        width: 280px;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .header-container .presentation .hello h2 {
+        font-size: 18px;
+    }
+
+    .header-container .presentation .hello span {
+        font-size: 18px;
+    }
+
+    .header-container .presentation h1 {
+        font-size: 30px;
+    }
+
+    @keyframes textTyping {
+        0%, 90%, 100% {
+            width: 1px;
+        }
+        30%, 60% {
+            width: 234px;
+        }
     }
 }
