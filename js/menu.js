@@ -3,20 +3,13 @@ function menu() {
     let menu = document.querySelector('.menu')
     menu.classList.toggle('active')
     let menuActive = document.querySelector('.active')
-    var position = window.pageYOffset
-    menuActive.style.top = position + 'px'
-}
-
-function menuPosition() {
-    let menuActive = document.querySelector('.active')
-    var position = window.pageYOffset
-    menuActive.style.top = position + 'px'
+    menuActive.style.top = 0
 }
 
 function exitMenu() {
     let menu = document.querySelector('.menu')
     menu.classList.remove('active')
-    menu.style.top = '-110%'
+    menu.style.top = '-110vh'
 }
 
 function openPage(page, local) {
@@ -34,5 +27,5 @@ function openPage(page, local) {
     
     let menu = document.querySelector('.menu')
     menu.classList.remove('active')
-    menu.style.top = '-110%'
+    menu.style.top = '-110vh'
 }

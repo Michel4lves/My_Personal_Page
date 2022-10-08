@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 .menu {
-    position: absolute;
-    top: -110%;
+    position: fixed;
+    top: -110vh;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -40,7 +40,6 @@
     transition: 0.5s;
     transform: rotate(-45deg);
     cursor: pointer;
-    /* border: 1px solid #fff; */
 }
 
 .menu .btn-exit-menu::before {
@@ -126,3 +125,12 @@ ul li a:hover {
     color: #fff;
 }
 
+@media (max-width: 540px) {
+    .menu img {
+        left: 20px;
+    }
+
+    .menu .btn-exit-menu {
+        right: 20px;
+    }
+}
