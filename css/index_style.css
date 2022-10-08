@@ -82,3 +82,9 @@ header {
     min-width: 100vw;
     min-height: 100vh;
 }
+
+@media (max-width: 540px) {
+    .navigation-bar {
+        padding: 10px 30px;
+    }
+}
