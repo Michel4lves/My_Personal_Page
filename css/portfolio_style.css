@@ -34,6 +34,74 @@
     color: #ab741f;
 }
 
+.portfolio-container p {
+    font-size: 1.2em;
+    color: #f5f5f5;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.portfolio-container p .wrk {
+    color: #ab741f;
+}
+
+.portfolio-container a {
+    font-size: 1.2em;
+    color: #f5f5f5;
+    margin-top: 60px;
+    text-decoration: none;
+    border: 1px solid #ab741f;
+    padding: 10px 15px;
+}
+
+.portfolio-container a .git {
+    color: #ab741f;
+}
+
+.portfolio-container a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #ab741f;
+    font-weight: bold;
+    transform: translateX(-12px);
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 1s;
+}
+
+.portfolio-container a:hover:before {
+    width: 100%;
+}
+
+.portfolio-container a .git::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    transform: translateX(18px);
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.portfolio-container a:hover .git::before {
+    width: 100%;
+}
+
+.portfolio-container a:hover .git i {
+    color: #fff;
+    transition-delay: 0.5s;
+}
+
+
+
+
+
+
+
 .portfolio-container .cardBx {
     position: relative;
     display: flex;
