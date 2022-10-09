@@ -15,7 +15,7 @@ function exitMenu() {
 function openPage(page, local) {
     var index = page
     var target = local
-    var url = 'https://michel4lves.github.io/My_Personal_Page/content/' + index + '.html'
+    var url = '../content/' + index + '.html'
     var xml = new XMLHttpRequest()
     xml.onreadystatechange = function() {
         if (xml.readyState == 4 && xml.status == 200) {
