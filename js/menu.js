@@ -1,4 +1,3 @@
-
 function menu() {
     let menu = document.querySelector('.menu')
     menu.classList.toggle('active')
@@ -12,20 +11,61 @@ function exitMenu() {
     menu.style.top = '-110vh'
 }
 
-function openPage(page, local) {
-    var index = page
-    var target = local
-    var url = '../content/' + index + '.html'
-    var xml = new XMLHttpRequest()
-    xml.onreadystatechange = function() {
-        if (xml.readyState == 4 && xml.status == 200) {
-            document.getElementById(target).innerHTML = xml.responseText
-        }
-    }
-    xml.open('GET', url, true)
-    xml.send()
-    
+let introMenu = document.querySelector('#menuIntro')
+introMenu.onclick = function() {
+    let progressbar = document.getElementById('progressbar')
+    progressbar.style.height = '0'
     let menu = document.querySelector('.menu')
     menu.classList.remove('active')
     menu.style.top = '-110vh'
+    let about = document.querySelector('.about')
+    about.style.right = '110vw'
+    let portfolio = document.querySelector('.portfolio')
+    portfolio.style.left = '110vw'
+    let contact = document.querySelector('.contact')
+    contact.style.top = '150vh'
+}
+
+
+let aboutMenu = document.querySelector('#menuAbout')
+aboutMenu.onclick = function() {
+    let menu = document.querySelector('.menu')
+    menu.classList.remove('active')
+    menu.style.top = '-110vh'
+    let about = document.querySelector('.about')
+    about.style.right = '0'
+    let portfolio = document.querySelector('.portfolio')
+    portfolio.style.left = '110vw'
+    let contact = document.querySelector('.contact')
+    contact.style.top = '150vh'
+}
+
+
+let portfolioMenu = document.querySelector('#menuPortfolio')
+portfolioMenu.onclick = function() {
+    let menu = document.querySelector('.menu')
+    menu.classList.remove('active')
+    menu.style.top = '-110vh'
+    let about = document.querySelector('.about')
+    about.style.right = '110vw'
+    let portfolio = document.querySelector('.portfolio')
+    portfolio.style.left = '0'
+    let contact = document.querySelector('.contact')
+    contact.style.top = '150vh'
+}
+
+
+let contactMenu = document.querySelector('#menuContact')
+contactMenu.onclick = function() {
+    let progressbar = document.getElementById('progressbar')
+    progressbar.style.height = '0'
+    let menu = document.querySelector('.menu')
+    menu.classList.remove('active')
+    menu.style.top = '-110vh'
+    let about = document.querySelector('.about')
+    about.style.right = '110vw'
+    let portfolio = document.querySelector('.portfolio')
+    portfolio.style.left = '110vw'
+    let contact = document.querySelector('.contact')
+    contact.style.top = '0'
 }

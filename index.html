@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="css/index_style.css">
     <link rel="stylesheet" href="css/menu_style.css">
     <!-- <link rel="stylesheet" href="css/transition.css"> -->
+    <link rel="stylesheet" href="css/intro_style.css">
+    <link rel="stylesheet" href="css/about_style.css">
+    <link rel="stylesheet" href="css/portfolio_style.css">
+    <link rel="stylesheet" href="css/contact_style.css">
 
-
+    
+    
 </head>
-<body onload="load('intro','content')">
-
+<body>
 
 <!-- Header section -->
     <header class="color-set" id="header">
@@ -27,31 +31,294 @@
         </div>
     </header>
 <!-- End of header section -->
+
 <!-- Menu section -->
     <section>
         <div class="menu">
             <img src="imgs/logos/logo-la.png" alt="logo">
             <div class="btn-exit-menu  color-set" onclick="exitMenu()"></div>
             <ul>
-                <li data-text="Início" onclick="openPage('intro','content')"><a class="color-set">Início</a></li>
-                <li data-text="Sobre mim" onclick="openPage('about','content')"><a class="color-set">Sobre mim</a></li>
-                <li data-text="Portfolio" onclick="openPage('portfolio','content')"><a class="color-set">Portfolio</a></li>
-                <li data-text="Contato" onclick="openPage('contact','content')"><a class="color-set">Contato</a></li>
+                <li data-text="Início"><a id="menuIntro" class="color-set">Início</a></li>
+                <li data-text="Sobre mim"><a id="menuAbout" class="color-set">Sobre mim</a></li>
+                <li data-text="Portfolio"><a id="menuPortfolio" class="color-set">Portfolio</a></li>
+                <li data-text="Contato"><a id="menuContact" class="color-set">Contato</a></li>
             </ul>
         </div>
     </section>
 <!-- End of menu section -->
-    <main>
-        <div class="page-container" id="content"></div>
-    </main>
+
+<!-- Scroll -->
     <div id="progressbar" class="color-set"></div>
     <div id="scrollpath"></div>
+<!-- End of scroll -->
 
-    <script src="js/menu.js"></script>
+<!-- Main Intro -->
+    <section class="bg color-set" id="intro">
+        <div class="header-container">
+            <div class="avatar color-set">
+                <div class="picture">
+                    <img src="../imgs/avatar/eu-la.png" alt="me.png" class="me color-set">
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="presentation">
+                <div class="hello">
+                    <h2 class="color-set">Olá,</h2>
+                    <span>eu sou</span>
+                </div>
+                <h1>Michel Alves</h1>
+                <h3 class="color-set">Desenvolvedor Web Front End</h3>
+            </div>
+        </div>
+    </section>
+<!-- End of Main Intro -->
+
+<!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h1>Sobre<span class="color-set me">Mim</span></h1>
+            <div class="about-me-box">
+                <div class="description">
+                    <p>Atualmente focando nas tecnologias voltadas ao <span class="color-set">FrontEnd</span>, sou um profissional apaixonado por tecnologia que, buscando transição de carreira, decidi trilhar o caminho da programação.</p>
+                    <p>Possuo conhecimento em <span class="color-set">desenvolvimento</span> de <span class="color-set">softwares</span> em geral e <span class="color-set">aplicações Web</span>.</p>
+                    <a href="#" target="_blank" class="cvbtn color-set"><span class="btn"></span>Baixar CV</a>
+                </div>
+                <img src="../imgs/perfil/perfil.png" alt="perfil.png">
+            </div>
+            <h1><span class="color-set my">Minhas</span>Habilidades</h1>
+            <div class="skills">
+                <div class="card">
+                    <div class="imgBx" data-text="Html">
+                        <div class="percent" style="--num:85">
+                            <div class="dot color-set"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>85<span>%</span></h2>
+                                <p>Html</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <h3>Html</h3>
+                            <p>É uma linguagem de marcação de hipertexto para apresentar e estruturar o conteúdo na web.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx" data-text="Css">
+                        <div class="percent" style="--num:72">
+                            <div class="dot color-set"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>72<span>%</span></h2>
+                                <p>Css</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <h3>Css</h3>
+                            <p>Cascading Style Sheets (ou simplesmente CSS), onde se define estilos para seu projeto web.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx" data-text="Js">
+                        <div class="percent" style="--num:60">
+                            <div class="dot color-set"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>60<span>%</span></h2>
+                                <p>Js</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <h3>Js</h3>
+                            <p>é uma linguagem de programação que permite a você implementar itens complexos em páginas web</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx" data-text="Python">
+                        <div class="percent" style="--num:95">
+                            <div class="dot color-set"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle class="color-set" cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>95<span>%</span></h2>
+                                <p>Python</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <h3>Python</h3>
+                            <p>É uma linguagem de programação amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="teste">
+
+        </div>
+    </section>
+<!-- End of About Section -->
+
+<!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <h1><span class="color-set me">Meu</span>Portfolio</h1>
+            <p>Alguns dos meus <span class="color-set wrk">trabalhos</span></p>
+            <a href="https://github.com/Michel4lves"  target="_blank" data-text="&nbsp;Acesse também meus repositórios no&nbsp;">Acesse também meus repositórios no <span class="color-set git"  data-text="&nbsp;github&nbsp;"><i class="fa fa-github" aria-hidden="true"></i> github</span></a>
+            <div class="cardBx">
+                <div class="card card1" data-anime>
+                    <div class="imgBx">
+                        <img src="../imgs/portfolios/port1.jpg" alt="">
+                    </div>
+                    <div class="contentBx">
+                        <div class="content">
+                            <h2>01</h2>
+                            <p>EM BREVE NOVO PROJETO !!</p>
+                            <a href="#" class="color-set">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-anime>
+                    <div class="imgBx">
+                        <img src="../imgs/portfolios/port2.jpg" alt="">
+                    </div>
+                    <div class="contentBx">
+                        <div class="content">
+                            <h2>02</h2>
+                            <p>EM BREVE NOVO PROJETO !!</p>
+                            <a href="#" class="color-set">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-anime>
+                    <div class="imgBx">
+                        <img src="../imgs/portfolios/port3.jpg" alt="">
+                    </div>
+                    <div class="contentBx">
+                        <div class="content">
+                            <h2>03</h2>
+                            <p>EM BREVE NOVO PROJETO !!</p>
+                            <a href="#" class="color-set">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-anime>
+                    <div class="imgBx">
+                        <img src="../imgs/portfolios/port4.jpg" alt="">
+                    </div>
+                    <div class="contentBx">
+                        <div class="content">
+                            <h2>04</h2>
+                            <p>EM BREVE NOVO PROJETO !!</p>
+                            <a href="#" class="color-set">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End of Portfolio Section -->
+
+<!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contactInfo color-set">
+                <h2>Meus contatos:</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>LOCALIZAÇÃO:<br>Pelotas, RS</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-at" aria-hidden="true"></i></span>
+                        <span>michelsantosa@gmail.com</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                        <span>(53) 99119-9848</span>
+                    </li>
+                </ul>
+                <ul class="sci">
+                    <a href="https://www.facebook.com/michel.alves.39948" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/m1ch3l_alv3s/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/michel-alves-892457232/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </ul>
+            </div>
+            <div class="contactForm color-set">
+                <h2>Mande uma Mensagem</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+                    <div class="inputBox w100 color-set">
+                        <!-- <input type="submit" value="Enviar"> -->
+                        <a href="#" class="send color-set">Enviar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End of Contact Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- scripts -->
     <script src="https://kit.fontawesome.com/1fb4c6612a.js" crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
     <script src="js/intro.js"></script>
-    <script src="js/load.js"></script>
-    <script src="js/scroll.js"></script>
     <script src="js/anime.js"></script>
+    <script src="js/scroll.js"></script>
+<!-- End of scripts -->
 </body>
 </html>

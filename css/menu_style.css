@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 900;
+    z-index: 70;
     background: #020202;
     transition: 0.5s;
 }

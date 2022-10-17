@@ -14,18 +14,14 @@ const debounce = function(func, wait, immediate) {
     };
 };
 
-
-
-var content = document.querySelector('.page-container')
-
+var content = document.querySelector('.portfolio')
 let target = document.querySelectorAll('[data-anime]')
 var telaAlto = ((window.innerHeight * 2) / 3)
 var telaBaixo = ((window.innerHeight * 3) / 5)
 
 function animeScroll() {
-    let windowTop = window.pageYOffset - telaAlto
-    let windowBottom = window.pageYOffset + telaBaixo
-
+    let windowTop = content.scrollTop - telaAlto
+    let windowBottom = content.scrollTop + telaBaixo
     target.forEach(function(element) {
         if ((windowBottom > element.offsetTop) && (windowTop < element.offsetTop)) {
             element.classList.add('animate')
@@ -36,10 +32,11 @@ function animeScroll() {
 }
 
 if (target.length) {
-    window.addEventListener('scroll',debounce(function() {
+    content.addEventListener('scroll',debounce(function() {
         animeScroll()
         let card1 = document.querySelector('.card1')
-        card1.classList.remove('card1')
+        if (card1 != null) {
+            card1.classList.remove('card1')
+        }
     }, 100))
 }
-
