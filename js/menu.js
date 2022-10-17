@@ -3,6 +3,8 @@ function menu() {
     menu.classList.toggle('active')
     let menuActive = document.querySelector('.active')
     menuActive.style.top = 0
+    let transition = document.querySelector('#transition')
+    transition.style.display = 'none'
 }
 
 function exitMenu() {
@@ -24,6 +26,8 @@ introMenu.onclick = function() {
     portfolio.style.left = '110vw'
     let contact = document.querySelector('.contact')
     contact.style.top = '150vh'
+    let transition = document.querySelector('#transition')
+    transition.style.display = 'block'
 }
 
 
@@ -38,6 +42,8 @@ aboutMenu.onclick = function() {
     portfolio.style.left = '110vw'
     let contact = document.querySelector('.contact')
     contact.style.top = '150vh'
+    let transition = document.querySelector('#transition')
+    transition.style.display = 'block'
 }
 
 
@@ -52,6 +58,8 @@ portfolioMenu.onclick = function() {
     portfolio.style.left = '0'
     let contact = document.querySelector('.contact')
     contact.style.top = '150vh'
+    let transition = document.querySelector('#transition')
+    transition.style.display = 'block'
 }
 
 
@@ -68,4 +76,6 @@ contactMenu.onclick = function() {
     portfolio.style.left = '110vw'
     let contact = document.querySelector('.contact')
     contact.style.top = '0'
+    let transition = document.querySelector('#transition')
+    transition.style.display = 'block'
 }

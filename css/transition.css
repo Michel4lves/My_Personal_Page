@@ -1,16 +1,17 @@
-#transition{
+#transition {
     position: fixed;
     height: 300vh;
     width: 120%;
     background-color: #ab741f;
     transition: 0s;
-    z-index: 1000;
+    z-index: 100;
     transform: rotateX(15deg);
     display: none;
     animation: transAnimate 1.5s linear forwards;
+    opacity: 1;
 }
 
-@keyframes transAnimate{
+@keyframes transAnimate {
     0%{
         transform : translateX(-150%) rotate(15deg);
     }
