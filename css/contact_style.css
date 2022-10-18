@@ -77,6 +77,10 @@
     font-weight: 700;
 }
 
+.contact-container .contactInfo .info li span:hover {
+    color: #fff;
+}
+
 .contact-container .contactInfo .info li span i {
     font-size: 25px;
     font-weight: bold;
@@ -97,6 +101,12 @@
     text-decoration: none;
     color: #121212;
     font-size: 34px;
+    transition: 1s;
+}
+
+.contact-container .contactInfo .sci a:hover {
+    color: #fff;
+    transform: rotateZ(-720deg);
 }
 
 .contact-container .contactForm {

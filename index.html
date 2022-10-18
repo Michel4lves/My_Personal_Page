@@ -267,45 +267,46 @@
             </div>
             <div class="contactForm color-set">
                 <h2>Mande uma Mensagem</h2>
-                <div class="formBox">
+                <form class="formBox" name="formBox" action="https://formsubmit.co/michel4alves.python@gmail.com" method="POST">
+                    
+                    <!-- submit configuration -->
+                    <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html"> -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- End of submit configuration -->
+                    
                     <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>First Name</span>
+                        <input type="text" required id="first-name" name="first-name">
+                        <span>Nome</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>Last Name</span>
+                        <input type="text" required id="last-name" name="last-name">
+                        <span>Sobrenome</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="email" required>
-                        <span>Email Address</span>
+                        <input type="email" required id="email" name="email">
+                        <span>Email</span>
                     </div>
                     <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>Mobile Number</span>
+                        <input type="text" required id="mobile-number" name="mobile-number">
+                        <span>Telefone</span>
                     </div>
-                    <div class="inputBox w100">
-                        <textarea required></textarea>
-                        <span>Write your message here...</span>
+                    <div class="inputBox w100" >
+                        <textarea required id="message" name="message"></textarea>
+                        <span>Escreva sua mensagem aqui...</span>
                     </div>
                     <div class="inputBox w100 color-set">
-                        <!-- <input type="submit" value="Enviar"> -->
-                        <a href="#" class="send color-set">Enviar</a>
+                        <input type="submit" value="Enviar" class="send color-set" onclick="Enviar()">
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
 <!-- End of Contact Section -->
 
-
-
-
-
+<!-- Transition -->
     <div id="transition"></div>
-
-
-
+<!-- End of Transition -->
 
 
 
@@ -317,6 +318,7 @@
     <script src="js/intro.js"></script>
     <script src="js/anime.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/message.js"></script>
 <!-- End of scripts -->
 </body>
 </html>
