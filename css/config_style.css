@@ -82,7 +82,7 @@
 .config .colorBx .colors .purple,
 .config .colorBx .colors .red,
 .config .colorBx .colors .yellow {
-    background: blue;
+    background: #00a2ff;
     width: 30px;
     height: 30px;
     margin: 0 10px;

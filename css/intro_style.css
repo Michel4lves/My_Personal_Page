@@ -1,6 +1,6 @@
 .bg {
     width: 100%;
-    background: linear-gradient(80deg, #ab741f 30%, #171717 45%);
+    /* background: linear-gradient(80deg, #ab741f 30%, #171717 45%); */
     transition-delay: 0.8s;
 }
 
