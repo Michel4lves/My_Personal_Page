@@ -202,7 +202,6 @@
 
 .contact-container .contactForm .formBox .inputBox .send:hover {
     background: #121212;
-    border: 1px solid #ab741f;
 }
 
 @media (max-width: 1200px) {

@@ -1,0 +1,112 @@
+.config {
+    position: absolute;
+    left: -160px;
+    width: 200px;
+    height: 120px;
+    background: transparent;
+    display: flex;
+    transition: 1s;
+    z-index: 60;
+}
+
+.config.active {
+    left: 0;
+}
+
+.config .icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #fff;
+    padding: 5px 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.config .icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.config .icon i {
+    color: #ff4138;
+    animation: rotation 3s linear infinite, colors 3s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    100% {
+        filter: hue-rotate(360deg)
+    }
+}
+
+.config .colorBx {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.config .colorBx h3 {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+}
+
+.config .colorBx .colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 160px;
+    height: 90px;
+    background: #fff;
+}
+
+.config .colorBx .colors .blue,
+.config .colorBx .colors .green,
+.config .colorBx .colors .orange,
+.config .colorBx .colors .purple,
+.config .colorBx .colors .red,
+.config .colorBx .colors .yellow {
+    background: blue;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.config .colorBx .colors .green {
+    background: #72C042;
+}
+
+.config .colorBx .colors .orange {
+    background: #ffBe1B;
+}
+
+.config .colorBx .colors .purple {
+    background: #8d4194;
+}
+
+.config .colorBx .colors .red {
+    background: #ff4138;
+}
+
+.config .colorBx .colors .yellow {
+    background: #fff200;
+}

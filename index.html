@@ -8,19 +8,19 @@
     
     <link rel="stylesheet" href="css/index_style.css">
     <link rel="stylesheet" href="css/menu_style.css">
-    <link rel="stylesheet" href="css/transition.css">
     <link rel="stylesheet" href="css/intro_style.css">
     <link rel="stylesheet" href="css/about_style.css">
     <link rel="stylesheet" href="css/portfolio_style.css">
     <link rel="stylesheet" href="css/contact_style.css">
-
+    <link rel="stylesheet" href="css/transition.css">
+    <link rel="stylesheet" href="css/config_style.css">
 </head>
 <body>
 
 <!-- Header section -->
-    <header class="color-set" id="header">
+    <header id="header">
         <div class="navigation-bar">
-            <img src="imgs/logos/logo-la.png" alt="logo">
+            <img class="logo" src="imgs/logos/logo-la.png" alt="logo">
             <div class="menu-btn" onclick="menu()">
                 <span class="first-bar"></span>
                 <span class="second-bar"></span>
@@ -33,13 +33,13 @@
 <!-- Menu section -->
     <section>
         <div class="menu">
-            <img src="imgs/logos/logo-la.png" alt="logo">
+            <img class="logo-menu" src="imgs/logos/logo-la.png" alt="logo">
             <div class="btn-exit-menu  color-set" onclick="exitMenu()"></div>
             <ul>
-                <li data-text="Início"><a id="menuIntro" class="color-set">Início</a></li>
-                <li data-text="Sobre mim"><a id="menuAbout" class="color-set">Sobre mim</a></li>
-                <li data-text="Portfolio"><a id="menuPortfolio" class="color-set">Portfolio</a></li>
-                <li data-text="Contato"><a id="menuContact" class="color-set">Contato</a></li>
+                <li data-text="Início"><a id="menuIntro" class="menu-list color-set">Início</a></li>
+                <li data-text="Sobre mim"><a id="menuAbout" class="menu-list color-set">Sobre mim</a></li>
+                <li data-text="Portfolio"><a id="menuPortfolio" class="menu-list color-set">Portfolio</a></li>
+                <li data-text="Contato"><a id="menuContact" class="menu-list color-set">Contato</a></li>
             </ul>
         </div>
     </section>
@@ -82,7 +82,7 @@
                 <div class="description">
                     <p>Atualmente focando nas tecnologias voltadas ao <span class="color-set">FrontEnd</span>, sou um profissional apaixonado por tecnologia que, buscando transição de carreira, decidi trilhar o caminho da programação.</p>
                     <p>Possuo conhecimento em <span class="color-set">desenvolvimento</span> de <span class="color-set">softwares</span> em geral e <span class="color-set">aplicações Web</span>.</p>
-                    <a href="#" target="_blank" class="cvbtn color-set"><span class="btn"></span>Baixar CV</a>
+                    <a href="#" target="_blank" class="cvbtn"><span class="btn"></span>Baixar CV</a>
                 </div>
                 <img src="imgs/perfil/perfil.png" alt="perfil.png">
             </div>
@@ -296,7 +296,7 @@
                         <span>Escreva sua mensagem aqui...</span>
                     </div>
                     <div class="inputBox w100 color-set">
-                        <input type="submit" value="Enviar" class="send color-set" onclick="Enviar()">
+                        <input type="submit" value="Enviar" class="send" onclick="Enviar()">
                     </div>
                 </form>
             </div>
@@ -305,12 +305,25 @@
 <!-- End of Contact Section -->
 
 <!-- Transition -->
-    <div id="transition"></div>
+    <div class="color-set" id="transition"></div>
 <!-- End of Transition -->
 
-
-
-
+<!-- Custon Colors -->
+    <div class="config">
+        <div class="colorBx">
+            <h3>Outras Cores</h3>
+            <div class="colors">
+                <div class="blue"></div>
+                <div class="green"></div>
+                <div class="orange"></div>
+                <div class="purple"></div>
+                <div class="red"></div>
+                <div class="yellow"></div>
+            </div>
+        </div>
+        <div class="icon"><i class="fa fa-cog gear" aria-hidden="true"></i></div>
+    </div>
+<!-- End of Custon Colors -->
 
 <!-- scripts -->
     <script src="https://kit.fontawesome.com/1fb4c6612a.js" crossorigin="anonymous"></script>
@@ -319,6 +332,6 @@
     <script src="js/anime.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/message.js"></script>
-<!-- End of scripts -->
+    <script src="js/config.js"></script>
 </body>
 </html>
